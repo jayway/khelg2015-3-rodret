@@ -79,6 +79,7 @@ select {
 }
 
 input[type="text"] {
+    font-size: inherit;
     text-align:left;
     padding: .5rem .75rem;
     text-decoration: none;

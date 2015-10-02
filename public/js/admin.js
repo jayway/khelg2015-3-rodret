@@ -1,7 +1,12 @@
 'use strict';
 
 var $selectCompany = $('.select-company select');
-var $addTripButton = $('.travel-list button');
+var $showOverlayButton = $('.travel-list button');
+var $addTripButton = $('.overlay button');
+
+function getSelectedCompanyName() {
+  return $selectCompany.val();
+}
 
 $selectCompany.on('change', function (event) {
   event.preventDefault();
@@ -25,11 +30,37 @@ function updateTravelList(data) {
     $('<li><a href="#">' + trip.name +'</a></li>').appendTo($list);
   });
 
-  $addTripButton.prop('disabled', false);
+  $showOverlayButton.prop('disabled', false);
 }
+
+$showOverlayButton.on('click', function (event) {
+  event.preventDefault();
+
+  var $overlay = $('.overlay');
+
+  $overlay.css('display', 'flex');
+});
 
 $addTripButton.on('click', function (event) {
   event.preventDefault();
 
-  $('.overlay').show();
+  var $overlay = $('.overlay');
+  var tripName = $('.trip-name', $overlay).val();
+
+  if (tripName !== '') {
+    $.ajax({
+      method: 'POST',
+      contentType: 'application/json',
+      dataType: 'json',
+      url: '/trips',
+      data: {
+        company: getSelectedCompanyName(),
+        name: tripName
+      }
+    }).done(onSuccess);
+
+    function onSuccess(data) {
+      $overlay.css('display', 'none');
+    }
+  }
 });

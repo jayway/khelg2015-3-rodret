@@ -11,16 +11,17 @@
 
   <div class="travel-list">
     <ul></ul>
-    <button type="submit" class="btn" disabled>Add trip</button>
+    <button class="btn" disabled>Add trip</button>
   </div>
 
 </main>
 
 <div class="overlay">
-  <div class="overlay-inner">
+  <form class="overlay-inner">
     <label>
-      <p>Add new trip</p>
-      <input type="text" placeholder="Name">
+      <h4>Add trip</h4>
+      <input class="trip-name" type="text" placeholder="Name" required>
     </label>
-  </div>
+    <button type="submit" class="btn">Create trip</button>
+  </form>
 </div>

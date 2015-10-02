@@ -17,6 +17,7 @@
   background: rgba(0, 0, 0, .8);
   bottom: 0;
   display: none;
+  flex-direction: column;
   justify-content: center;
   left: 0;
   position: absolute;
@@ -27,4 +28,16 @@
 .admin .overlay-inner {
   background: white;
   border-radius: 4px;
+  min-width: 15rem;
+  padding: 1rem;
+}
+
+.admin .overlay-inner h4 {
+  margin-bottom: .5rem;
+  margin-top: 0;
+}
+
+.admin .overlay-inner button {
+  margin-top: .5rem;
+  width: 100%;
 }
