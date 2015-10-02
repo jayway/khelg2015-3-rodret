@@ -4,6 +4,27 @@
   padding: .25rem .5rem;
 }
 
+.admin .main > div {
+  margin-bottom: 1rem;
+}
+
 .admin .travel-list {
   margin-bottom: 1rem;
+}
+
+.admin .overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, .8);
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.admin .overlay-inner {
+  background: white;
+  border-radius: 4px;
 }
