@@ -18,11 +18,12 @@ header ul li a {
     color:#fff;
 }
 
-
+h1, h2, h3, h4, p  {
+    margin:0;
+}
 
 .btn {
     width:120px;
-    border-radius:4px;
     margin-bottom:0;
 }
 

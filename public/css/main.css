@@ -91,13 +91,14 @@ input[type="text"]:focus {
 /* Buttons */
 .btn {
   background: #a9cf54;
-  border-radius: 2px;
+  border-radius: 4px;
   border-bottom: 1px solid #588f27;
   color: inherit;
   display: inline-block;
   padding: .5rem .75rem;
   text-decoration: none;
   margin-bottom: .5rem;
+  cursor:pointer;
 }
 .btn.cancel {
     background:#ecf0f1;
