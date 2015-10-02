@@ -1,0 +1,49 @@
+{
+  "companies": [
+    {
+      "companyName": "Jayway",
+      "employees": [
+        {
+          "name": "Anders Janmyr",
+          "personNumber": "690318-4890",
+          "passportNumber": "67876238888",
+          "phoneNumber": "+46-733-990360",
+          "email": "anders.janmyr@jayway.com"
+        },
+        {
+          "name": "Sofia Wijkström",
+          "personNumber": "760829-4040",
+          "passportNumber": "67811118888",
+          "phoneNumber": "+46-783-970360",
+          "email": "sofia.wijkstrom@jayway.com"
+        },
+        {
+          "name": "Anders Lund",
+          "personNumber": "590318-4890",
+          "passportNumber": "67844438888",
+          "phoneNumber": "+46-033-990360",
+          "email": "anders.lund@jayway.com"
+        },
+      ]
+    },
+    {
+      "companyName": "Apple",
+      "employees", [
+        {
+          "name": "Steve Works",
+          "personNumber": "590318-4850",
+          "passportNumber": "67867876888",
+          "phoneNumber": "+1-733-944-2360",
+          "email": "steve.works@apple.com"
+        },
+        {
+          "name": "John Works",
+          "personNumber": "760829-4040",
+          "passportNumber": "64444118888",
+          "phoneNumber": "+46-744-970360",
+          "email": "john.works@apple.com"
+        }
+      ]
+    }
+  ]
+}
