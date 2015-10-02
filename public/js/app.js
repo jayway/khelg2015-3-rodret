@@ -1,24 +1,33 @@
 ﻿$(document).ready(function () {
     $(window).on('hashchange', selectView);
 
+    var currentPage = window.location.hash.replace('#', '');
+
     init();
 
     function init() {
         setActiveMenu();
+        setActivePage();
+
+        setTimeout(function () {
+            $('.content').addClass('animate');
+        })        
     }
 
     function selectView() {
+        currentPage = window.location.hash.replace('#', '');
+
         setActiveMenu();
-        showPage(window.location.hash.replace('#', ''));
+        setActivePage();
     }
 
-    function showPage(pageName) {
-        $('.page').removeClass('show');
-        $('.page[data-page="' + pageName + '"]').addClass('show');
+    function setActivePage() {
+        $('.page').removeClass('active');
+        $('.page[data-page="' + currentPage + '"]').addClass('active');
     }
 
     function setActiveMenu() {
         $('header a').removeClass('active');
-        $('header a[href="' + window.location.hash + '"]').addClass('active');
+        $('header a[href="#' + currentPage + '"]').addClass('active');
     }
 });
