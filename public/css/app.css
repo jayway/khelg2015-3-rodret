@@ -18,12 +18,13 @@ header ul li a {
     color:#fff;
 }
 
-
+h1, h2, h3, h4, p  {
+    margin:0;
+}
 
 .btn {
     width:120px;
-    padding:8px 12px;
-    border-radius:4px;
+    margin-bottom:0;
 }
 
 #add-event {
@@ -32,14 +33,14 @@ header ul li a {
 #add-event .input-wrap {
     padding:10px;
 }
-.button-wrap {
+.btn-wrap {
     display:flex;
     justify-content:space-around;
     background:#333;
+    padding:1rem 0;
 }
-.button-wrap .btn:first-child {
-    background:#ecf0f1;
+.btn-wrap .btn:first-child {
+    
 }
-.button-wrap .btn:last-child {
-    background:#2980b9;
+.btn-wrap .btn:last-child {
 }
