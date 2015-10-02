@@ -99,6 +99,10 @@ input[type="text"]:focus {
   text-decoration: none;
   margin-bottom: .5rem;
 }
+.btn.cancel {
+    background:#ecf0f1;
+    border-bottom-color:#d2d5d6;
+}
 
 /**
  * Utilities
