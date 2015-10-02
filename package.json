@@ -42,15 +42,12 @@
   "dependencies": {
     "body-parser": "^1.9.0",
     "debug": "^1.0.4",
+    "ejs": "^2.3.4",
     "express": "^4.8.5",
     "mongoskin": "^1.4.4",
     "morgan": "^1.6.1"
   },
   "devDependencies": {
-    "chai": "^1.9.1",
-    "mocha": "^1.21.4",
-    "nodemon": "^1.2.1",
-    "sinon": "^1.10.3",
-    "supertest": "^0.13.0"
+    "nodemon": "^1.2.1"
   }
 }
