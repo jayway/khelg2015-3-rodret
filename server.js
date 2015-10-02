@@ -6,14 +6,6 @@ var app = require('./lib/app');
 var server = http.createServer(app);
 var io = require('socket.io')(server);
 
-function environment() {
-  return process.env.NODE_ENV || 'development';
-}
-
-function isProduction() {
-  return environment() === 'production';
-}
-
 // Set rendering engine
 app.set('view engine', 'ejs');
 
@@ -23,37 +15,29 @@ process.on('uncaughtException', function(err) {
   process.exit(1);
 });
 
-// Utility function to show middleware and routes
-// DEBUG=express-lab* npm start
-function printRoutes() {
-  var middleware = app._router.stack.map(function(route) {
-    return route.route ?
-      route.route.path :
-      route.name + ': ' + route.regexp;
-  });
-  debug('Middleware');
-  debug('\n' + middleware.join('\n') + '\n');
-}
-
-function start() {
-  var port = process.env.PORT || 3000;
-
-  printRoutes();
-  server.listen(port, function() {
-    console.log(environment().toUpperCase() + ' server started');
-    console.log('Port:', port);
-    console.log('URL:', 'http://localhost:' + port);
-  });
-}
-
-app.setupWebsockets(io);
+// app.setupWebsockets(io);
 
 server.app = app;
 server.start = start;
 
 module.exports = server;
 
-// Start the app if called directly
-if (require.main === module) {
-  start();
+start();
+
+function environment() {
+  return process.env.NODE_ENV || 'development';
+}
+
+function isProduction() {
+  return environment() === 'production';
+}
+
+function start() {
+  var port = process.env.PORT || 3000;
+
+  server.listen(port, function() {
+    console.log(environment().toUpperCase() + ' server started');
+    console.log('Port:', port);
+    console.log('URL:', 'http://localhost:' + port);
+  });
 }
