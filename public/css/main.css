@@ -6,12 +6,34 @@ body {
   min-height: 100%;
 }
 
+/**
+ * Resets
+ */
 img {
   border: 0;
   height: auto;
   max-width: 100%;
 }
 
+/**
+ * Header
+ */
+[role="header"] {
+  margin-bottom: 1rem;
+}
+
+/**
+ * Main
+ */
+[role="main"] {
+  padding: 0 1rem;
+}
+
+/**
+ * General styling
+ */
+
+/* Colors */
 .light-green {
     color:#a9cf54;
 }
@@ -37,6 +59,9 @@ img {
     color:#333;
 }
 
+/**
+ * Utilities
+ */
 .offscreen {
   border: 0;
   height: 1px;
