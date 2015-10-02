@@ -1,12 +1,11 @@
 <main class="main" role="main">
 
-  <!-- Company -->
-  <form>
+  <form class="select-company">
 
     <select>
       <option disabled selected>Select a company</option>
       <% companies.forEach(function (company) { %>
-      <option value="<%= company.id %>"><%= company.companyName %></option>
+      <option value="<%= company.companyName %>"><%= company.companyName %></option>
       <% }); %>
     </select>
 
