@@ -1,7 +1,14 @@
-﻿<div class="page show" data-page="events">
-	event list
+﻿﻿<div class="page show" data-page="events">
+
+	<h1>Event list</h1>	
 	
 	<a id="add-event-btn" href="#add-event">
 		<i class="fa fa-plus-circle fa-3x"></i>
 	</a>
+
+	﻿<ul>
+	<% events.forEach(function (event) { %>
+		<li><%= event.companyName %>"><%= event.companyName %></li>
+		<% }); %>
+	</ul>
 </div>
