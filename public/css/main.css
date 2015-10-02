@@ -120,6 +120,14 @@ input[type="text"]:focus {
 .btn.cancel:hover {
     background:#f9fdfe;
 }
+.btn.secondary {
+    background:#3399cc;
+    border-bottom-color:#1c8bbd;
+    color: #FFF;
+}
+.btn.secondary:hover {
+    background:#45a6d9;
+}
 
 /**
  * Utilities
