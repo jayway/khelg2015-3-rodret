@@ -26,6 +26,14 @@ button {
   font-size: inherit;
 }
 
+select {
+  border: 1px solid #a9cf54;
+  border-radius: 2px;
+  background: none;
+  font-size: inherit;
+  min-height: 1.5rem;
+}
+
 /**
  * Header
  */
@@ -70,12 +78,32 @@ button {
   color: #333;
 }
 
+input[type="text"] {
+    text-align:left;
+    padding: .5rem .75rem;
+    text-decoration: none;
+    margin-bottom: .5rem;
+    border-radius:4px;
+    width:100%;
+    box-sizing:border-box;
+    display:block;
+    border:1px solid #ccc;
+}
+input[type="text"]:focus {
+    border-color: #66AFE9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
 /* Buttons */
 .btn {
   background: #a9cf54;
+  border: 0;
   border-radius: 2px;
   border-bottom: 1px solid #588f27;
   color: inherit;
+  cursor: pointer;
   display: inline-block;
   padding: .5rem .75rem;
   text-decoration: none;

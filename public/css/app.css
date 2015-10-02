@@ -17,3 +17,29 @@ header ul li {
 header ul li a {
     color:#fff;
 }
+
+
+
+.btn {
+    width:120px;
+    padding:8px 12px;
+    border-radius:4px;
+}
+
+#add-event {
+    text-align:center;
+}
+#add-event .input-wrap {
+    padding:10px;
+}
+.button-wrap {
+    display:flex;
+    justify-content:space-around;
+    background:#333;
+}
+.button-wrap .btn:first-child {
+    background:#ecf0f1;
+}
+.button-wrap .btn:last-child {
+    background:#2980b9;
+}
