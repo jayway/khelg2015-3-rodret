@@ -3,12 +3,13 @@
 }
 
 .index .destination {
-  display: flex;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   font-size: 1.25rem;
   justify-content: center;
 }
 
-.index .destination a:first-child {
-  margin-right: 1rem;
+.index .destination a {
+  display: block;
 }
