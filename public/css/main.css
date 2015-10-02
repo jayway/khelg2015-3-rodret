@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  min-height: 100%;
+  background: url(/images/books.jpg);
+  background-size: 100%
+}
+
+
+#message {
+  position: fixed;
+  top: -60px;
+  min-height: 40px;
+  width: 100%;
+  color: white;
+  border-radius: 0 0 2em 2em;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 16pt;
+  transition-property: top background-color;
+  transition-duration: 1s;
+}
+
+
+#message.info {
+  background: green;
+  top: 0;
+}
+
+#message.error {
+  background: red;
+  top: 0;
+}
+
+#content {
+  margin: auto;
+  margin-top: 3em;
+  padding: 0.5em 2em;
+  background-color: rgba(50, 50, 50, 0.8);
+  width: 1000px;
+  border-radius: 2em;
+  color: white;
+}
+
+#books {
+  border: double 1em #111;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: .5em 1em;
+  margin: 1em;
+  border-radius: .2em;
+}
+li:nth-child(2n) {
+  background-color: rgba(144, 238, 144, 0.8);
+}
+li:nth-child(2n+1) {
+  background-color: rgba(173, 216, 230, 0.8);
+}
+li.editing {
+  background-color: rgba(255, 111, 111, 0.8);
+}
+
+.title {
+  color: black;
+  font-size: 24pt;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.author {
+  color: #114;
+  font-size: 18pt;
+  font-style: italic;
+  font-family: Baskerville, Garamond, "Times New Roman", serif;
+}
+
+a {
+  color: white;
+}
+
+label {
+  font-size: 18pt;
+  margin-right: 5px;
+}
+input {
+  font-size: 18pt;
+}
