@@ -71,9 +71,13 @@ h1, h2, h3, h4, p  {
 .event-list {
     background:#ecf0f1;
 }
+.event-list li {
+    background-color: #FFF;
+    margin: 10px 0;
+}
 .event-list li article {
     display:flex;
-    padding:30px;
+    padding:20px;
     position:relative;
 }
 .event-list li article p {
@@ -85,7 +89,7 @@ h1, h2, h3, h4, p  {
     height:80px;
     border-radius:100%;
     background:#ccc;
-    margin-right:30px;
+    margin-right:20px;
 }
 .event-list li .time {
     position:absolute;
