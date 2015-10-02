@@ -1,0 +1,14 @@
+.index h2 {
+  text-align: center;
+}
+
+.index .destination {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  justify-content: center;
+}
+
+.index .destination a:first-child {
+  margin-right: 1rem;
+}
