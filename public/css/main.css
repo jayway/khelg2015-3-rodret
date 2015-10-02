@@ -1,5 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,300italic,400italic,600italic,700italic);
+
 body {
   margin: 0;
   min-height: 100%;
+
+  font-family: 'Open Sans', sans-serif;
 }
 
+.light-green {
+    color:#a9cf54;
+}
+.dark-green {
+    color:#588f27;
+}
+.light-blue {
+    color:#3399cc;
+}
+.dark-blue {
+    color:#2980b9;
+}
+.light-red {
+    color:#ff6666;
+}
+.dark-red {
+    color:#e74c3c;
+}
+.light-grey {
+    color:#ecf0f1;
+}
+.dark-grey {
+    color:#333;
+}
