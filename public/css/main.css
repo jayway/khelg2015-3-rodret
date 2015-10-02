@@ -110,9 +110,15 @@ input[type="text"]:focus {
   margin-bottom: .5rem;
   cursor:pointer;
 }
+.btn:hover {
+    background:#b8df63;
+}
 .btn.cancel {
     background:#ecf0f1;
     border-bottom-color:#d2d5d6;
+}
+.btn.cancel:hover {
+    background:#f9fdfe;
 }
 
 /**
