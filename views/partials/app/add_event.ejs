@@ -1,14 +1,20 @@
-﻿<div id="add-event">
+﻿<form type="post" action="travel-events" id="add-event">
 	<h1>Add event</h1>
 	<div class="input-wrap">
 		<input type="text" value="Toledo" />
 		<input type="text" value="18:00" />
 		<input type="text" value="" placeholder="What" />
-		<input class="btn" type="file" value="" placeholder="Photo" />
+
+		<div class="btn secondary add-file">
+			<i class="fa fa-camera-retro fa-2x"></i>
+			Upload photo
+			<input type="file" value="" />
+		</div>
+		
 	</div>
 
-	<div class="btn-wrap">
+	<div class="btn-wrap">			
 		<div class="btn cancel">Cancel</div>
-		<div class="btn confirm">Publish</div>
+		<input class="btn confirm" type="submit" value="Publish" />
 	</div>
-</div>
+</form>
