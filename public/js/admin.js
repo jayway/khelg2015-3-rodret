@@ -24,7 +24,16 @@ function updateTravelList(data) {
   $list.empty();
 
   data.forEach(function (trip) {
-    $('<li><a href="#">' + trip.name +'</a></li>').appendTo($list);
+    var $listItem = $('<li>');
+
+    $('<a href="/trips/name"' + trip.name + '>')
+      .text(trip.name)
+      .on('click', function (event) {
+        event.preventDefault();
+        console.log(trip.name);
+      }).appendTo($listItem);
+
+    $listItem.appendTo($list);
   });
 
   $showOverlayButton.prop('disabled', false);
@@ -72,4 +81,9 @@ $addTripButton.on('click', function (event) {
       refreshCompanyData(companyName);
     }
   }
+});
+
+$('.trip').on('click', function (event) {
+  event.preventDefault();
+  console.log('Open trip');
 });

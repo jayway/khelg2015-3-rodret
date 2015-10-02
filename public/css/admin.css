@@ -14,12 +14,15 @@
 .admin .travel-list {
   margin-bottom: 1rem;
 }
+
 .admin .travel-list ul {
   margin-bottom: 1rem;
 }
+
 .admin .travel-list li {
   padding: .25rem;
 }
+
 .admin .travel-list li:nth-child(even) {
   background: #ecf0f1;
 }
