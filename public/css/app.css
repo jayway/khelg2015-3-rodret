@@ -28,22 +28,51 @@ header ul li a {
     text-decoration:none;
 }
 
-header + div {
+.content {
+    position:relative;
     flex-grow:1;
+    width:100%;
+    overflow:hidden;
+}
+
+.page {
+    position:absolute;
+    top:0;
+    left:100%;
+    right:0;
+    bottom:0;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity:0;
+    transition: all 300ms ease-out;  
+}
+.page.show {
+    opacity:1;
+    left:0;
+    z-index:10;
 }
 
 h1, h2, h3, h4, p  {
     margin:0;
 }
 
-
+#add-event-btn {
+    position:absolute;
+    right:15px;
+    bottom:15px;
+    display:inline-block;
+    background:#3399cc;
+    color: #FFF;
+    text-decoration:none;
+}
+.btn.secondary:hover {
+    background:#45a6d9;
+}
 
 #add-event {
-    text-align:center;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
+    
 }
 #add-event h1 {
     padding:20px 0;

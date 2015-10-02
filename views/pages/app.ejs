@@ -3,13 +3,16 @@
   <% include ../partials/head %>
   
   <link rel="stylesheet" href="/css/app.css">
+  <script src="/js/app.js"></script>
 
   <body class="app">
-
+	
     <% include ../partials/app/header %>
-    <% include ../partials/app/event_list %>
-    <% include ../partials/app/add_event %>
-
+	
+	<div class="content">
+		<% include ../partials/app/event_list %>
+		<% include ../partials/app/add_event %>
+	</div>
   </body>
 
 </html>
