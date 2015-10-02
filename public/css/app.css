@@ -27,6 +27,9 @@ header ul li a {
     color:#fff;
     text-decoration:none;
 }
+header ul li a.active {
+    border-bottom:1px solid #fff;
+}
 
 .content {
     position:relative;
@@ -53,6 +56,9 @@ header ul li a {
     left:0;
     z-index:10;
 }
+.page > h1:first-child {
+    padding:20px 0;
+}
 
 h1, h2, h3, h4, p  {
     margin:0;
@@ -73,9 +79,6 @@ h1, h2, h3, h4, p  {
 
 #add-event {
     
-}
-#add-event h1 {
-    padding:20px 0;
 }
 #add-event .input-wrap {
     padding:10px;

@@ -1,9 +1,14 @@
 ﻿$(document).ready(function () {
     $(window).on('hashchange', selectView);
 
-    function selectView() {
-        console.info(window.location.hash);
+    init();
 
+    function init() {
+        setActiveMenu();
+    }
+
+    function selectView() {
+        setActiveMenu();
         showPage(window.location.hash.replace('#', ''));
     }
 
@@ -12,4 +17,8 @@
         $('.page[data-page="' + pageName + '"]').addClass('show');
     }
 
+    function setActiveMenu() {
+        $('header a').removeClass('active');
+        $('header a[href="' + window.location.hash + '"]').addClass('active');
+    }
 });
