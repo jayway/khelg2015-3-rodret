@@ -50,7 +50,7 @@ header ul li a.active {
     justify-content: space-between;
     opacity:0; 
 }
-.animate .page {
+.animate .page.active {
     transition: all 300ms ease-out;
     transition-property:opacity transform;
 }
@@ -68,12 +68,38 @@ h1, h2, h3, h4, p  {
     margin:0;
 }
 
+.event-list {
+    background:#ecf0f1;
+}
+.event-list li article {
+    display:flex;
+    padding:30px;
+    position:relative;
+}
+.event-list li article p {
+    color:#ccc;
+    text-align: left;
+}
+.event-list li .user-icon {
+    width:80px;
+    height:80px;
+    border-radius:100%;
+    background:#ccc;
+    margin-right:30px;
+}
+.event-list li .time {
+    position:absolute;
+    top:30px;
+    right:30px;
+}
+
 #add-event-btn {
     position:absolute;
     right:15px;
     bottom:15px;
     display:inline-block;
     text-decoration:none;
+    z-index:100;
 }
 #add-event-btn i {
     color:#3399cc;

@@ -1,4 +1,4 @@
-﻿﻿<div class="page" data-page="events">
+﻿﻿<div class="event-list page" data-page="events">
 
 	<h1>Event list</h1>	
 	
@@ -7,15 +7,18 @@
 	</a>
 
 	﻿<ul>
-		<% events.forEach(function (event) { %>
-			<li>
-				<img src=="" />
-				<article>
+		<li>			
+			<article>
+				<img class="user-icon" src=="" />
+				<div>
 					<h3>Test titel</h3>
 					<p>Test user</p>
-				</article>
-				<p class="time">Time</p>
-			</li>
+					<p class="time">Time</p>
+				</div>				
+			</article>			
+		</li>
+		<% events.forEach(function (event) { %>
+			
 		<% }); %>
 	</ul>
 </div>
