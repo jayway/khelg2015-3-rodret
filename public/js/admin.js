@@ -8,15 +8,7 @@ function getSelectedCompanyName() {
   return $selectCompany.val();
 }
 
-$selectCompany.on('change', function (event) {
-  event.preventDefault();
-
-  var companyName = getSelectedCompanyName();
-
-  getCompanyData(companyName);
-});
-
-function getCompanyData(companyName) {
+function refreshCompanyData(companyName) {
   var endPoint = '/trips/company/' + companyName;
 
   $.get(endPoint, onSuccess);
@@ -37,6 +29,14 @@ function updateTravelList(data) {
 
   $showOverlayButton.prop('disabled', false);
 }
+
+$selectCompany.on('change', function (event) {
+  event.preventDefault();
+
+  var companyName = getSelectedCompanyName();
+
+  refreshCompanyData(companyName);
+});
 
 $showOverlayButton.on('click', function (event) {
   event.preventDefault();
@@ -69,7 +69,7 @@ $addTripButton.on('click', function (event) {
       $overlay.css('display', 'none');
 
       var companyName = getSelectedCompanyName();
-      getCompanyData(companyName);
+      refreshCompanyData(companyName);
     }
   }
 });
