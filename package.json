@@ -1,0 +1,19 @@
+{
+  "name": "khelg2015-3-rodret",
+  "version": "0.1.0",
+  "description": "Prototype for KHelg 2015:3, room \"Rodret\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayway/khelg2015-3-rodret.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayway/khelg2015-3-rodret/issues"
+  },
+  "homepage": "https://github.com/jayway/khelg2015-3-rodret#readme"
+}
