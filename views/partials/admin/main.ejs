@@ -1,13 +1,14 @@
 <main class="main" role="main">
 
+  <!-- Company -->
   <form>
 
-    <ul class="travel-list">
-      <li>Trip 1</li>
-      <li>Trip 2</li>
-      <li>Trip 3</li>
-    </ul>
-    <button>New trip</button>
+    <select>
+      <option disabled selected>Select a company</option>
+      <% companies.forEach(function (company) { %>
+      <option value="<%= company.id %>"><%= company.name %></option>
+      <% }); %>
+    </select>
 
   </form>
 

@@ -26,6 +26,14 @@ button {
   font-size: inherit;
 }
 
+select {
+  border: 1px solid #a9cf54;
+  border-radius: 2px;
+  background: none;
+  font-size: inherit;
+  min-height: 1.5rem;
+}
+
 /**
  * Header
  */
@@ -91,9 +99,11 @@ input[type="text"]:focus {
 /* Buttons */
 .btn {
   background: #a9cf54;
+  border: 0;
   border-radius: 2px;
   border-bottom: 1px solid #588f27;
   color: inherit;
+  cursor: pointer;
   display: inline-block;
   padding: .5rem .75rem;
   text-decoration: none;
