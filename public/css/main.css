@@ -1,88 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,300italic,400italic,600italic,700italic);
+
 body {
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   min-height: 100%;
-  background-size: 100%
 }
 
-
-#message {
-  position: fixed;
-  top: -60px;
-  min-height: 40px;
-  width: 100%;
-  color: white;
-  border-radius: 0 0 2em 2em;
-  text-align: center;
-  padding-top: 5px;
-  font-size: 16pt;
-  transition-property: top background-color;
-  transition-duration: 1s;
+/**
+ * Resets
+ */
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
 }
 
-
-#message.info {
-  background: green;
-  top: 0;
-}
-
-#message.error {
-  background: red;
-  top: 0;
-}
-
-#content {
-  margin: auto;
-  margin-top: 3em;
-  padding: 0.5em 2em;
-  background-color: rgba(50, 50, 50, 0.8);
-  width: 1000px;
-  border-radius: 2em;
-  color: white;
-}
-
-#books {
-  border: double 1em #111;
+ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-li {
-  list-style: none;
-  padding: .5em 1em;
-  margin: 1em;
-  border-radius: .2em;
-}
-li:nth-child(2n) {
-  background-color: rgba(144, 238, 144, 0.8);
-}
-li:nth-child(2n+1) {
-  background-color: rgba(173, 216, 230, 0.8);
-}
-li.editing {
-  background-color: rgba(255, 111, 111, 0.8);
+button {
+  font-size: inherit;
 }
 
-.title {
-  color: black;
-  font-size: 24pt;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+/**
+ * Header
+ */
+[role="header"] {
+  margin-bottom: 1rem;
 }
 
-.author {
-  color: #114;
-  font-size: 18pt;
-  font-style: italic;
-  font-family: Baskerville, Garamond, "Times New Roman", serif;
+/**
+ * Main
+ */
+[role="main"] {
+  padding: 0 1rem;
 }
 
-a {
-  color: white;
+/**
+ * General styling
+ */
+
+/* Colors */
+.light-green {
+  color: #a9cf54;
+}
+.dark-green {
+  color: #588f27;
+}
+.light-blue {
+  color: #3399cc;
+}
+.dark-blue {
+  color: #2980b9;
+}
+.light-red {
+  color: #ff6666;
+}
+.dark-red {
+  color: #e74c3c;
+}
+.light-grey {
+  color: #ecf0f1;
+}
+.dark-grey {
+  color: #333;
 }
 
-label {
-  font-size: 18pt;
-  margin-right: 5px;
+/* Buttons */
+.btn {
+  background: #a9cf54;
+  border-radius: 2px;
+  border-bottom: 1px solid #588f27;
+  color: inherit;
+  display: inline-block;
+  padding: .5rem .75rem;
+  text-decoration: none;
+  margin-bottom: .5rem;
 }
-input {
-  font-size: 18pt;
+
+/**
+ * Utilities
+ */
+.offscreen {
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
