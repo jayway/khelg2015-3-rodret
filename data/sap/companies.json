@@ -23,12 +23,12 @@
           "passportNumber": "67844438888",
           "phoneNumber": "+46-033-990360",
           "email": "anders.lund@jayway.com"
-        },
+        }
       ]
     },
     {
       "companyName": "Apple",
-      "employees", [
+      "employees": [
         {
           "name": "Steve Works",
           "personNumber": "590318-4850",
