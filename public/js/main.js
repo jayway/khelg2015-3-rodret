@@ -4,6 +4,23 @@ $(function() {
     console.log('added', data);
   });
 
+  $('#add-event').submit(function(event) {
+    event.preventDefault();
+    var formData = new FormData();
+    formData.append('title', $('.title').val());
+    formData.append('text', $('.text').val());
+    formData.append('timestamp', $('.timestamp').val());
+    var photoInput = document.querySelector('.photo');
+    console.log('photo', photoInput);
+    formData.append('photo', photoInput.files[0], 'photo.jpg');
+    var xhr = new XMLHttpRequest;
+    xhr.open('POST', $(this).attr("action"), true);
+    xhr.send(formData);
+    // $.post($(this).attr("action"), formData, function(data) {
+    //   alert(data);
+    // });
+  });
+
   // socket.emit('travel-event', {
   //   travelId: 'toledo',
   //   travellerId: 'Thomas Dagsberg',
