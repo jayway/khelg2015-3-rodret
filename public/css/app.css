@@ -1,3 +1,19 @@
 ﻿header {
-    
+    background: #ecf0f1;
+}
+header img {
+    height:60px;
+    margin: 0 auto;
+    display: block;
+}
+header ul {
+    background:#588f27;
+    display:flex;
+    justify-content:space-around;
+}
+header ul li {
+    padding:10px 15px;
+}
+header ul li a {
+    color:#fff;
 }
