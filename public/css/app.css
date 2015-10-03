@@ -63,6 +63,7 @@ header ul li a.active {
     opacity:1;
     z-index:10;
     overflow-y:auto;
+    -webkit-overflow-scrolling: touch;
     transform:translateX(-100%);
     -webkit-transform:translateX(-100%);
 }
