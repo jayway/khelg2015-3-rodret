@@ -82,6 +82,26 @@ h1, h2, h3, h4, p  {
     width:100%;
 }
 
+.event-list > h1:first-child {
+        display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#add-event-btn {
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    margin-right: -1rem;
+    display:inline-block;
+    text-decoration:none;
+    text-align:right;
+}
+#add-event-btn i {
+    color:#3399cc;
+}
+.btn.secondary:hover {
+    background:#45a6d9;
+}
+
 .event-list {
     justify-content: flex-start;
 }
@@ -121,19 +141,7 @@ h1, h2, h3, h4, p  {
     width:100%;
 }
 
-#add-event-btn {
-    margin:15px;
-    margin-top:5px;
-    display:inline-block;
-    text-decoration:none;
-    text-align:right;
-}
-#add-event-btn i {
-    color:#3399cc;
-}
-.btn.secondary:hover {
-    background:#45a6d9;
-}
+
 
 #add-event {
 
