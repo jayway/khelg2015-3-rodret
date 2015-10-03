@@ -60,7 +60,7 @@ header ul li a.active {
 }
 .page.active {
     width:100%;
-    opacity:1;    
+    opacity:1;
     z-index:10;
     overflow-y:auto;
     transform:translateX(-100%);
@@ -126,7 +126,7 @@ h1, h2, h3, h4, p  {
 }
 
 #add-event {
-    
+
 }
 #add-event .input-wrap {
     padding:10px;

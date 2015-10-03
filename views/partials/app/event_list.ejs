@@ -9,6 +9,7 @@
 	<ul id='event-list'>
       <% events.forEach(function (event) { %>
 		<li>
+      <img class="photo" src="<%= event.photo %>">
 			<article>
 				<img class="user-icon" src="https://randomuser.me/api/portraits/thumb/men/4.jpg" />
 
@@ -16,7 +17,6 @@
 					<h3><%= event.title %></h3>
 					<p><%= event.text %></p>
 					<p class="time"><%= event.timestamp %></p>
-					<img class="photo" src="<%= event.photo %>">
 				</div>
 			</article>
 		</li>
