@@ -1,22 +1,26 @@
-﻿﻿<div class="event-list page" data-page="events">
-	﻿<ul>
-		<li>			
-			<article>
-				<img class="user-icon" src="https://randomuser.me/api/portraits/thumb/men/4.jpg" />
-				
-				<div>
-					<h3>Test titel</h3>
-					<p>Test user</p>					
-				</div>
-				<p class="time">Time</p>				
-			</article>			
-		</li>
-		<% events.forEach(function (event) { %>
-			
-		<% }); %>
-	</ul>
-	
+<div class="event-list page" data-page="events">
+
+	<h1>Event list</h1>
+
 	<a id="add-event-btn" href="#add-event">
 		<i class="fa fa-plus-circle fa-3x"></i>
 	</a>
+
+	<ul id='event-list'>
+      <% events.forEach(function (event) { %>
+		<li>
+			<article>
+				<img class="user-icon" src="https://randomuser.me/api/portraits/thumb/men/4.jpg" />
+
+				<div>
+					<h3><%= event.title %></h3>
+					<p><%= event.text %></p>
+					<p class="time"><%= event.timestamp %></p>
+					<img class="photo" src="<%= event.photo %>">
+				</div>
+			</article>
+		</li>
+      <% }); %>
+
+	</ul>
 </div>

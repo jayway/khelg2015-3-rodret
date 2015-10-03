@@ -2,6 +2,15 @@ $(function() {
   var socket = io.connect();
   socket.on('travel-event:added', function (data) {
     console.log('added', data);
+    var event = data[0];
+    var html =
+      '<li><article>' +
+      '<img class="user-icon" src="https://randomuser.me/api/portraits/thumb/men/4.jpg" />' +
+    '<div><h3>' + event.title + '</h3><p>' + event.text +'</p>' +
+      '<p class="time">' + event.timestamp + '</p>' +
+      '<img class="photo" src="' + event.photo + '"></div>' +
+      '</article></li>';
+    $('#event-list').prepend(html)
   });
 
   $('body').on('submit', '#add-event', function(event) {
@@ -11,7 +20,7 @@ $(function() {
     formData.append('title', $('.title').val());
     formData.append('text', $('.text').val());
     formData.append('timestamp', $('.timestamp').val());
-    var photoInput = document.querySelector('.photo');
+    var photoInput = document.querySelector('.photo-input');
     console.log('photo', photoInput);
     formData.append('photo', photoInput.files[0], 'photo.jpg');
     var xhr = new XMLHttpRequest;
