@@ -3,6 +3,7 @@
 var $selectCompany = $('.select-company select');
 var $showOverlayButton = $('.travel-list button');
 var $addTripButton = $('.overlay button');
+var $overlay = $('.overlay');
 
 function getSelectedCompanyName() {
   return $selectCompany.val();
@@ -26,12 +27,9 @@ function updateTravelList(data) {
   data.forEach(function (trip) {
     var $listItem = $('<li>');
 
-    $('<a href="/trips/name"' + trip.name + '>')
+    $('<a href="/admin/trip/' + trip.name + '">')
       .text(trip.name)
-      .on('click', function (event) {
-        event.preventDefault();
-        console.log(trip.name);
-      }).appendTo($listItem);
+      .appendTo($listItem);
 
     $listItem.appendTo($list);
   });
@@ -50,15 +48,13 @@ $selectCompany.on('change', function (event) {
 $showOverlayButton.on('click', function (event) {
   event.preventDefault();
 
-  var $overlay = $('.overlay');
-
+  $overlay.find('input').val('');
   $overlay.css('display', 'flex');
 });
 
 $addTripButton.on('click', function (event) {
   event.preventDefault();
 
-  var $overlay = $('.overlay');
   var tripName = $('.trip-name', $overlay).val();
   var data = JSON.stringify({
     company: getSelectedCompanyName(),
@@ -81,9 +77,4 @@ $addTripButton.on('click', function (event) {
       refreshCompanyData(companyName);
     }
   }
-});
-
-$('.trip').on('click', function (event) {
-  event.preventDefault();
-  console.log('Open trip');
 });
