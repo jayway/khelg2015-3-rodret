@@ -36,6 +36,7 @@ header ul li a.active {
     flex-grow:1;
     width:100%;
     overflow:hidden;
+    background:#eef1f2;
 }
 
 .page {
@@ -48,20 +49,26 @@ header ul li a.active {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    opacity:0; 
+    opacity:0;
 }
-.animate .page.active {
+.animate .page {
     transition: all 300ms ease-out;
     transition-property:opacity transform;
+
+    -webkit-transition: all 300ms ease-out;
+    -webkit-transition-property:opacity transform;
 }
 .page.active {
     width:100%;
     opacity:1;    
     z-index:10;
+    overflow-y:auto;
     transform:translateX(-100%);
+    -webkit-transform:translateX(-100%);
 }
 .page > h1:first-child {
     padding:20px 0;
+    font-size:1.7rem;
 }
 
 h1, h2, h3, h4, p  {
@@ -69,20 +76,26 @@ h1, h2, h3, h4, p  {
 }
 
 .event-list {
-    background:#ecf0f1;
+    justify-content: flex-start;
 }
 .event-list li {
     background-color: #FFF;
     margin: 10px 0;
+    border-top:1px solid #CCC;
+    border-bottom:1px solid #CCC;
 }
 .event-list li article {
     display:flex;
-    padding:20px;
+    padding:10px;
     position:relative;
+    align-items: center;
 }
 .event-list li article p {
     color:#ccc;
     text-align: left;
+}
+.event-list li article div p {
+    margin-top:0.5rem;
 }
 .event-list li .user-icon {
     width:80px;
@@ -93,12 +106,13 @@ h1, h2, h3, h4, p  {
 }
 .event-list li .time {
     position:absolute;
-    top:30px;
-    right:30px;
+    top:10px;
+    right:10px;
+    font-size:0.9rem;
 }
 
 #add-event-btn {
-    position:absolute;
+    position:fixed;
     right:15px;
     bottom:15px;
     display:inline-block;
@@ -117,6 +131,7 @@ h1, h2, h3, h4, p  {
 }
 #add-event .input-wrap {
     padding:10px;
+    padding-top: 0;
 }
 #add-event .btn input {
     position:absolute;
