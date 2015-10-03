@@ -112,12 +112,11 @@ h1, h2, h3, h4, p  {
 }
 
 #add-event-btn {
-    position:fixed;
-    right:15px;
-    bottom:15px;
+    margin:15px;
+    margin-top:5px;
     display:inline-block;
     text-decoration:none;
-    z-index:100;
+    text-align:right;
 }
 #add-event-btn i {
     color:#3399cc;
@@ -164,4 +163,11 @@ h1, h2, h3, h4, p  {
 }
 .add-file i {
     margin-right: 0.5rem;
+}
+
+.btn-wrap,
+.input-wrap {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
