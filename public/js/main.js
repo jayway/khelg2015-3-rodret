@@ -4,11 +4,12 @@ $(function() {
     console.log('added', data);
     var event = data[0];
     var html =
-      '<li><article>' +
+      '<li>' +
+      '<img class="photo" src="' + event.photo + '">' +
+      '<article>' +
       '<img class="user-icon" src="https://randomuser.me/api/portraits/thumb/men/4.jpg" />' +
-    '<div><h3>' + event.title + '</h3><p>' + event.text +'</p>' +
-      '<p class="time">' + event.timestamp + '</p>' +
-      '<img class="photo" src="' + event.photo + '"></div>' +
+      '<div><h3>' + event.title + '</h3><p>' + event.text +'</p>' +
+      '<p class="time">' + event.timestamp + '</p></div>' +
       '</article></li>';
     $('#event-list').prepend(html)
   });
