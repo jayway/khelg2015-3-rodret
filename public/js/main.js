@@ -4,7 +4,8 @@ $(function() {
     console.log('added', data);
   });
 
-  $('#add-event').submit(function(event) {
+  $('body').on('submit', '#add-event', function(event) {
+    console.log(event);
     event.preventDefault();
     var formData = new FormData();
     formData.append('title', $('.title').val());
@@ -16,21 +17,7 @@ $(function() {
     var xhr = new XMLHttpRequest;
     xhr.open('POST', $(this).attr("action"), true);
     xhr.send(formData);
-    // $.post($(this).attr("action"), formData, function(data) {
-    //   alert(data);
-    // });
+    window.location.hash = '#events';
   });
 
-  // socket.emit('travel-event', {
-  //   travelId: 'toledo',
-  //   travellerId: 'Thomas Dagsberg',
-  //   title: 'Awesome Cow',
-  //   text: 'Just saw an awesome cow at the bull fight in Madrid',
-  //   timestamp: (new Date()).toISOString(),
-  //   coordinates: {
-  //     lat: 123,
-  //     lon: 234
-  //   },
-  //   photo: 'http://www.windsorstar.com/news/cms/binary/3062417.jpg?size=640x420'
-  // });
 });
