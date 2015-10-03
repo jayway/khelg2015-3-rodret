@@ -120,13 +120,13 @@ h1, h2, h3, h4, p  {
 }
 #add-event .btn input {
     position:absolute;
-    left:0;
-    top:0;
-    right:0;
-    bottom:0;
-    opacity:0;
-    display:block;
-    width:100%;
+    left: -10px;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    opacity: 0;
+    display: block;
+    width: 120%;
     flex-grow:1;
 }
 .btn-wrap {
